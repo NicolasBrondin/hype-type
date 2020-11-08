@@ -1,12 +1,12 @@
 <template>
     <div class="bubble-container">
-        Je suis la vieille voiture de ton oncle !
+        {{text}}
     </div>
 </template>
 
 <script>
 export default {
-    
+    props: ["text"]
 }
 </script>
 
