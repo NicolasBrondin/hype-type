@@ -1,12 +1,13 @@
 <template>
-    <div class="bubble-container">
+    <div class="bubble-container" :style="'background-color:'+color">
+        <span class="arrow"  :style="'border-color: transparent transparent '+color+' transparent'"></span>
         {{text}}
     </div>
 </template>
 
 <script>
 export default {
-    props: ["text"]
+    props: ["text", "color"]
 }
 </script>
 
@@ -15,6 +16,7 @@ export default {
         position: relative;
         display: inline-block;
         width: 400px;
+        max-width: 100%;
         padding: 10px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
@@ -26,7 +28,7 @@ export default {
         font-family: Roboto;
     }
 
-    .bubble-container::before {
+    .arrow {
         position: absolute;
         content: "";
         top: -10px;
