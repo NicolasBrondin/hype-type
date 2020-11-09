@@ -85,7 +85,7 @@ export default {
           }
           case 7: {
             this.car_state = ""; 
-            this.text = "Fin";
+            this.text = "Fin (1h c'est très court)";
             this.color = "#3498db";
             break;
           }
@@ -101,6 +101,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
   margin: 0;
 }
