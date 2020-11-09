@@ -12,9 +12,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About Horny Car
 
-[![Product Name Screen Shot][product-screenshot]](https://NicolasBrondin.github.io/horny-car/build/)
+[![Product Name Screen Shot][product-screenshot]](https://NicolasBrondin.github.io/horny-car/index.html)
 
-Horny Car est un concept de jeu développé en 1 heure lors d'une **Game jam de la loose** sur le thème "used cars". L'expérience est très courte mais pourrait être étoffée assez facilement, pour tester le prototype, voici une démo disponible en ligne : https://NicolasBrondin.github.io/horny-car/build/
+Horny Car est un concept de jeu développé en 1 heure lors d'une **Game jam de la loose** sur le thème "used cars". L'expérience est très courte mais pourrait être étoffée assez facilement, pour tester le prototype, voici une démo disponible en ligne : https://NicolasBrondin.github.io/horny-car/index.html
 
 ### Built With
 
