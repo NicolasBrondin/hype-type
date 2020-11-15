@@ -12,9 +12,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About Horny Car
 
-[![Product Name Screen Shot][product-screenshot]](https://NicolasBrondin.github.io/horny-car/index.html)
+[![Product Name Screen Shot][product-screenshot]](https://NicolasBrondin.github.io/hype-type/build/index.html)
 
-Horny Car est un concept de jeu développé en 1 heure lors d'une **Game jam de la loose** sur le thème "used cars". L'expérience est très courte mais pourrait être étoffée assez facilement, pour tester le prototype, voici une démo disponible en ligne : https://NicolasBrondin.github.io/horny-car/index.html
+Hype Type est un concept de jeu développé en 1 heure lors d'une **Game jam de la loose** sur le thème "trou noir". Voici une démo disponible en ligne : https://NicolasBrondin.github.io/hype-type/build/index.html
 
 ### Built With
 
@@ -38,9 +38,9 @@ Voici les outils pré-requis pour installer le jeu :
  
 1. Cloner le dépôt
 ```sh
-git clone https://github.com/NicolasBrondin/horny-car
+git clone https://github.com/NicolasBrondin/hype-type
 ```
-2. cd horny-car
+2. cd hype-type
 3. npm install
 4. npm run serve
 
@@ -53,7 +53,7 @@ Dans le cas où ce jeu venait à évoluer, vous trouverez toujours la version or
 
 Nicolas Brondin-Bernard - [@NicolasBrondin](https://twitter.com/NicolasBrondin) - nicolas@brondin.com
 
-Project Link: [https://github.com/NicolasBrondin/horny-car](https://github.com/NicolasBrondin/horny-car)
+Project Link: [https://github.com/NicolasBrondin/hype-type](https://github.com/NicolasBrondin/hype-type)
 
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -63,21 +63,18 @@ Project Link: [https://github.com/NicolasBrondin/horny-car](https://github.com/N
 * Participez aux futures éditions (tous les dimanche soirs de 19 à 21h) sur le Discord : https://discord.gg/JNkNRh7UHN
 
 
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/NicolasBrondin/basic-readme-template.svg?style=flat-square
-[contributors-url]: https://github.com/NicolasBrondin/basic-readme-template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/NicolasBrondin/basic-readme-template.svg?style=flat-square
-[forks-url]: https://github.com/NicolasBrondin/basic-readme-template/network/members
-[stars-shield]: https://img.shields.io/github/stars/NicolasBrondin/basic-readme-template.svg?style=flat-square
-[stars-url]: https://github.com/NicolasBrondin/basic-readme-template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/NicolasBrondin/basic-readme-template.svg?style=flat-square
-[issues-url]: https://github.com/NicolasBrondin/basic-readme-template/issues
-[license-shield]: https://img.shields.io/github/license/NicolasBrondin/basic-readme-template.svg?style=flat-square
-[license-url]: https://github.com/NicolasBrondin/basic-readme-template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/NicolasBrondin/hype-type.svg?style=flat-square
+[contributors-url]: https://github.com/NicolasBrondin/hype-type/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/NicolasBrondin/hype-type.svg?style=flat-square
+[forks-url]: https://github.com/NicolasBrondin/hype-type/network/members
+[stars-shield]: https://img.shields.io/github/stars/NicolasBrondin/hype-type.svg?style=flat-square
+[stars-url]: https://github.com/NicolasBrondin/hype-type/stargazers
+[issues-shield]: https://img.shields.io/github/issues/NicolasBrondin/hype-type.svg?style=flat-square
+[issues-url]: https://github.com/NicolasBrondin/hype-type/issues
+[license-shield]: https://img.shields.io/github/license/NicolasBrondin/hype-type.svg?style=flat-square
+[license-url]: https://github.com/NicolasBrondin/hype-type/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: docs/cover.png
