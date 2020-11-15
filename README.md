@@ -12,9 +12,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About Horny Car
 
-[![Product Name Screen Shot][product-screenshot]](https://NicolasBrondin.github.io/hype-type/build/index.html)
+[![Product Name Screen Shot][product-screenshot]](https://NicolasBrondin.github.io/hype-type/index.html)
 
-Hype Type est un concept de jeu développé en 1 heure lors d'une **Game jam de la loose** sur le thème "trou noir". Voici une démo disponible en ligne : https://NicolasBrondin.github.io/hype-type/build/index.html
+Hype Type est un concept de jeu développé en 1 heure lors d'une **Game jam de la loose** sur le thème "trou noir". Voici une démo disponible en ligne : https://NicolasBrondin.github.io/hype-type/index.html
 
 ### Built With
 
