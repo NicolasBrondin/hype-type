@@ -1,101 +1,46 @@
 <template>
-  <div id="app">
-    <h1>Sélectionne ta voiture</h1>
-    <div style="display: flex;align-items: center;width: 100%;justify-content: center;">
-      <button @click="click_button()" class="arrow-button">
-        <img src="./assets/arrow.svg" height="50" style="transform: rotate(180deg);"/>
-      </button>
-      <Car :on_click="click_car" :state="car_state"/>
-      <button @click="click_button()" class="arrow-button">
-        <img src="./assets/arrow.svg" height="50"/>
-        </button>
+    <div class="app" v-if="word">
+        <input type="text" v-model="user_text" @keyup="refresh_text" />
+        <p>{{user_text}}<span style="color: grey;">{{to_be_written}}</span></p>
     </div>
-    <SpeechBubble :color="color" :text="text"/>
-  </div>
 </template>
 
 <script>
-import SpeechBubble from './components/SpeechBubble.vue'
-import Car from './components/Car.vue'
 
 export default {
   name: 'App',
   data: function(){
     return {
-      step: 0,
-      car_state: "",
-      color: "#3498db",
-      text: "Je suis la vieille voiture de ton oncle !"
+      sentences: [
+        "je dois taper ce texte"
+      ],
+      word: null,
+      word_index: 0,
+      user_text: "",
+      
+    }
+  },
+  mounted: function(){
+    this.word = this.sentences[0].split(' ')[this.word_index];
+  },
+  computed: {
+    to_be_written: function(){
+      return this.word.substr(this.user_text.length);
     }
   },
   methods: {
-    click_button: function(){
-      switch(this.step){
-        case 0 : {this.set_step(1);break;}
-        case 1 : {this.set_step(2);break;}
-        case 2 : {this.set_step(3);break;}
-        case 3 : {this.set_step(4);break;}
-        case 6 : {this.set_step(7);break;}
-      }
-    },
-    click_car: function(){
-      switch(this.step){
-        case 4 : {this.set_step(5);break;}
-        case 5 : {this.set_step(6);break;}
-        case 6 : {this.set_step(7);break;}
-      }
-    },
-    set_step: function(step){
-      if(this.step < step){
-        this.step = step;
-        switch(this.step){
-          case 1: {
-            this.car_state = "surprised"; 
-            this.text = "Comment ça tu ne veux pas me choisir ?"
-            break;
-          }
-          case 2: {
-            this.car_state = "surprised"; 
-            this.text = "Tu sais que si ton oncle m'avait pas eu, ton père n'aurait pas rencontré ta mère..."
-            break;
-          }
-          case 3: {
-            this.car_state = "angry"; 
-            this.text = "Tu me déçois !";
-            this.color = "#e67e22";
-            break;
-          }
-          case 4: {
-            this.car_state = "angry"; 
-            this.text = "Touche-moi la carrosserie pour te faire pardonner...";
-            this.color = "#e67e22";
-            break;
-          }
-          case 5: {
-            this.car_state = "angry"; 
-            this.text = "Encore !";
-            this.color = "#f1c40f";
-            break;
-          }
-          case 6: {
-            this.car_state = "surprised"; 
-            this.text = "C'est bon, tu es pardonné... Mais ne dit rien à personne";
-            this.color = "#3498db";
-            break;
-          }
-          case 7: {
-            this.car_state = ""; 
-            this.text = "Fin (1h c'est très court)";
-            this.color = "#3498db";
-            break;
-          }
-        }
+    refresh_text: function(){
+      console.log(this.word.length);
+      console.log(this.user_text.length);
+      if(this.word.indexOf(this.user_text) !== 0) {
+        this.user_text = this.user_text.substr(0,this.user_text.length-1);
+      } else if(this.word.indexOf(this.user_text) === 0 && this.word.length === this.user_text.length){
+        this.word = this.sentences[0].split(' ')[++this.word_index];
+        this.user_text = "";
       }
     }
   },
   components: {
-    SpeechBubble,
-    Car
   }
 }
 </script>
