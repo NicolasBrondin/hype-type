@@ -1,7 +1,7 @@
 <template>
     <div id="app">
       <div style="width: 100%;position: relative;" v-if="!is_ended">
-        <h1>Tape ce texte le plus vite possible</h1>
+        <h1>Tape ces mots le plus vite possible</h1>
         <h2>{{time/1000}}s</h2>
         <input id="main-input" type="text" v-model="user_text" @keyup="refresh_text" />
         <p>{{user_text}}<span>{{to_be_written}}</span></p> 
@@ -17,8 +17,17 @@ export default {
   data: function(){
     return {
       sentences: [
-        "je dois taper ce texte",
-        "et celui là aussi"
+        "parfois il m'arrive de partager",
+        "des articles sur les réseaux sociaux",
+        "sans les avoir lu,",
+        "certains sont des fake news",
+        "et c'est mal.",
+        "le pire c'est que",
+        "je recopie même",
+        "tout ce qu'un simple jeu me dit d'écrire",
+        "sans savoir si ça aura des conséquences sur ma vie",
+        "mon cerveau est donc un trou noir.",
+        ":("
       ],
       word: null,
       sentence_index: 0,
@@ -58,7 +67,7 @@ export default {
             clearInterval(this.timer);
           } else {
             this.sentence_index++;
-            this.word_index = 0;
+            this.word_index = -1;
           }
         }
         this.word = this.sentences[this.sentence_index].split(' ')[++this.word_index];
