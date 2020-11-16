@@ -6,7 +6,7 @@
         <input id="main-input" type="text" :value="user_text" @input="user_text = $event.target.value" />
         <p>{{user_text}}<span>{{to_be_written}}</span></p> 
       </div>
-      <h1 v-if="is_ended">Jeu terminé en {{time/1000}}s</h1>   
+      <h1 v-if="is_ended">Jeu terminé en {{time/1000}}s, <br> belle journée à toi !</h1>   
     </div>
 </template>
 
@@ -17,17 +17,13 @@ export default {
   data: function(){
     return {
       sentences: [
-        "parfois il m'arrive de partager",
-        "des articles sur les réseaux sociaux",
-        "sans les avoir lu,",
-        "certains sont des fake news",
-        "et c'est mal.",
-        "le pire c'est que",
-        "je recopie même",
-        "tout ce qu'un simple jeu me dit d'écrire",
-        "sans savoir si ça aura des conséquences sur ma vie",
-        "mon cerveau est donc un trou noir.",
-        ":("
+        "je suis une belle personne.",
+        "aujourd'hui est une bonne journée.",
+        "j'ai le droit au bohneur.",
+        "je mérite les bonnes choses qui m'arrivent.",
+        "je vais surmonter les obstacles de la vie.",
+        "je fais de mon mieux.",
+        ":)"
       ],
       word: null,
       sentence_index: 0,
@@ -40,8 +36,18 @@ export default {
   },
   mounted: function(){
     this.word = this.sentences[this.sentence_index].split(' ')[this.word_index];
-    document.querySelector("#main-input").click()
-    document.querySelector("#main-input").focus();
+
+    setTimeout(function(){
+
+      document.querySelector("#main-input").click()
+      document.querySelector("#main-input").focus();
+
+      document.body.ontouchend = function() {
+        document.querySelector("#main-input").click()
+        document.querySelector("#main-input").focus();
+      }
+    },100)
+    
     document.querySelector("#main-input").addEventListener("blur", function(){
       setTimeout(function(){
         document.querySelector("#main-input").click();
@@ -124,6 +130,7 @@ p {
   left: 0;
   user-select: none;
   touch-action: none;
+  pointer-events: none;
 }
 
 h1, h2 {
