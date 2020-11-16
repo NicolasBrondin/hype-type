@@ -3,7 +3,7 @@
       <div style="width: 100%;position: relative;" v-if="!is_ended">
         <h1>Tape ces mots le plus vite possible</h1>
         <h2>{{time/1000}}s</h2>
-        <input id="main-input" type="text" v-model="user_text" @keyup="refresh_text" />
+        <input id="main-input" type="text" v-model="user_text" />
         <p>{{user_text}}<span>{{to_be_written}}</span></p> 
       </div>
       <h1 v-if="is_ended">Jeu terminé en {{time/1000}}s</h1>   
@@ -55,8 +55,9 @@ export default {
       }
     }
   },
-  methods: {
-    refresh_text: function(){
+  watch: {
+    user_text: function(){
+      console.log(this.user_text);
       this.user_text = this.user_text.toLowerCase();
       if(this.word.toLowerCase().indexOf(this.user_text) !== 0) {
         this.user_text = this.user_text.substr(0,this.user_text.length-1);
@@ -117,6 +118,13 @@ p {
   text-align: center;
   width: 100%;
   left: 0;
+  user-select: none;
+  touch-action: none;
+}
+
+h1, h2 {
+  user-select: none;
+  touch-action: none;
 }
 
 span {

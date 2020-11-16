@@ -10,7 +10,7 @@
 [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
 
 <!-- ABOUT THE PROJECT -->
-## About Horny Car
+## About Hype Type
 
 [![Product Name Screen Shot][product-screenshot]](https://NicolasBrondin.github.io/hype-type/index.html)
 
