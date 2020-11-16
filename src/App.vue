@@ -3,7 +3,7 @@
       <div style="width: 100%;position: relative;" v-if="!is_ended">
         <h1>Tape ces mots le plus vite possible</h1>
         <h2>{{time/1000}}s</h2>
-        <input id="main-input" type="text" v-model="user_text" />
+        <input id="main-input" type="text" :value="user_text" @input="user_text = $event.target.value" />
         <p>{{user_text}}<span>{{to_be_written}}</span></p> 
       </div>
       <h1 v-if="is_ended">Jeu terminé en {{time/1000}}s</h1>   
@@ -40,9 +40,13 @@ export default {
   },
   mounted: function(){
     this.word = this.sentences[this.sentence_index].split(' ')[this.word_index];
+    document.querySelector("#main-input").click()
     document.querySelector("#main-input").focus();
     document.querySelector("#main-input").addEventListener("blur", function(){
-      setTimeout(function(){document.querySelector("#main-input").focus()}, 0);
+      setTimeout(function(){
+        document.querySelector("#main-input").click();
+        document.querySelector("#main-input").focus();
+      }, 0);
     });
     this.timer = setInterval(function(){this.time += 100;}.bind(this),100)
   },
