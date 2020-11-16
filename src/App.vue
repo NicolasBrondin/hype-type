@@ -68,7 +68,7 @@ export default {
   watch: {
     user_text: function(){
       console.log(this.user_text);
-      this.user_text = this.user_text.toLowerCase();
+      this.user_text = this.user_text.toLowerCase().replace("’","'").replace("‘","'").replace("`","'").replace("´","'");
       if(this.word.toLowerCase().indexOf(this.user_text) !== 0) {
         this.user_text = this.user_text.substr(0,this.user_text.length-1);
       } else if(this.word.indexOf(this.user_text) === 0 && this.word.length === this.user_text.length){
