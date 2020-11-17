@@ -19,7 +19,7 @@ export default {
       sentences: [
         "je suis une belle personne.",
         "aujourd'hui est une bonne journée.",
-        "j'ai le droit au bohneur.",
+        "j'ai le droit au bonheur.",
         "je mérite les bonnes choses qui m'arrivent.",
         "je vais surmonter les obstacles de la vie.",
         "je fais de mon mieux.",
